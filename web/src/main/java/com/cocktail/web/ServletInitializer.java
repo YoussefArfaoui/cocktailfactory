@@ -1,4 +1,4 @@
-package com.cocktail;
+package com.cocktail.web;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;

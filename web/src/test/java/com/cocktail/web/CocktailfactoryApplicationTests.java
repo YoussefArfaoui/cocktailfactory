@@ -1,4 +1,4 @@
-package com.cocktail;
+package com.cocktail.web;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
