@@ -1,2 +1,2 @@
-# cocktailfactory
-cocktail factory Project
+# Cocktail Factory
+Cocktail Factory Project
