@@ -49,16 +49,15 @@ public @Data class Cocktail implements Serializable {
 	/** The duration. */
 	Duration duration;
 
-//	/** The images. */
-//	// TODO : should be saved as BLOB/CLOB not as string
-//	List<String> images;
 
-	/** The ingredients. */
-	@OneToMany
-	List<Ingredient> ingredients;
+	// TODO : should be saved as BLOB/CLOB not as string
+	String image;
 
 	/** The steps. */
 	@OneToMany
 	List<Step> steps;
+	
+	@OneToMany
+	List<CocktailIngredient> cocktailIngredients;
 
 }

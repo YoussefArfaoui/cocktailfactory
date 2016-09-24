@@ -33,6 +33,6 @@ public @Data class Step {
 	String description;
 
 	/** The order. */
-	String order;
+	int orderNumber;
 
 }
