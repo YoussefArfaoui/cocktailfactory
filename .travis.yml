@@ -1,0 +1,20 @@
+language: java
+sudo: true
+
+cache:
+  directories:
+  - $HOME/.m2
+  
+jdk:
+  - oraclejdk8
+ 
+before_install:
+  sudo pip install codecov
+
+script: mvn install
+
+after_success:
+  - mvn package jacoco:report coveralls:report
+
+notifications:
+email: false
