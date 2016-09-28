@@ -6,18 +6,20 @@ package com.cocktail.model;
  * @author adelgo
  */
 
-
 public enum Unit {
-	
+
 	/** The m L. */
 	mL,
-	
+
 	/** The l. */
 	L,
-	
+
 	/** The gr. */
 	gr,
-	
+
 	/** The kg. */
-	kg
+	kg,
+
+	/** The pound. */
+	pound
 }
