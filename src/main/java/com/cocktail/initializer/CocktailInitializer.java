@@ -74,7 +74,7 @@ public class CocktailInitializer {
 	 */
 	public static List<Ingredient> readIngredient() throws Exception {
 
-		ClassPathResource resource = new ClassPathResource("ingredients.csv");
+		ClassPathResource resource = new ClassPathResource("staticData/ingredients.csv");
 		Scanner scanner = new Scanner(resource.getInputStream());
 		String line = scanner.nextLine();
 		scanner.close();
