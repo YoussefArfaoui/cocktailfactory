@@ -59,9 +59,9 @@ public class CocktailInitializer {
 		}
 
 		List<Ingredient> ingredients = readIngredient();
-		log.info("Importing {} stores into DB…", ingredients.size());
+		log.info("Importing {} ingredients into DB…", ingredients.size());
 		ingredientRepository.save(ingredients);
-		log.info("Successfully imported {} stores.", ingredientRepository.count());
+		log.info("Successfully imported {} ingredients.", ingredientRepository.count());
 	}
 
 	/**
