@@ -1,4 +1,4 @@
-# Cocktail Factory
+# Cocktail Factory Project
 
 [ ![Build Status] [travis-image] ] [travis]
 
