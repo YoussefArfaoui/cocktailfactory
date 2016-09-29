@@ -9,7 +9,8 @@ jdk:
   - oraclejdk8
  
 before_install:
-  sudo pip install codecov
+ - chmod +x mvnw
+ - sudo pip install codecov
 
 script: mvn install
 
