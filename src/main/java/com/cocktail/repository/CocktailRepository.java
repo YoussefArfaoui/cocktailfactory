@@ -1,5 +1,8 @@
 package com.cocktail.repository;
 
+import java.time.Duration;
+import java.util.List;
+
 import org.springframework.data.repository.CrudRepository;
 
 import com.cocktail.model.Cocktail;
@@ -17,5 +20,23 @@ public interface CocktailRepository extends CrudRepository<Cocktail, Long> {
 	 * @return the cocktail
 	 */
 	Cocktail findByName(String name);
+
+	/**
+	 * Find by rate.
+	 *
+	 * @param rate
+	 *            the rate
+	 * @return the list
+	 */
+	List<Cocktail> findByRate(int rate);
+
+	/**
+	 * Find by duration.
+	 *
+	 * @param duration
+	 *            the duration
+	 * @return the list
+	 */
+	List<Cocktail> findByDuration(Duration duration);
 
 }
