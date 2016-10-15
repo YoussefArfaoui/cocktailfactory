@@ -13,33 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.cocktail.services;
+package com.cocktail.initializer.staticdata;
 
-import com.cocktail.model.Cocktail;
+import com.cocktail.model.Step;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
- * Cocktail Service
- * 
- * @author arfaouiy
+ * The Class StepData.
  *
+ * @author arfaouiy
  */
-public interface CocktailService {
-	/**
-	 * Get cocktail by Id
-	 * 
-	 * @param id
-	 *            the cocktail id
-	 * @return the cocktail
-	 */
-	Cocktail getCocktailById(Integer id);
 
-	/**
-	 * Get cocktail by name
-	 * 
-	 * @param name
-	 *            the cocktail name
-	 * @return the cocktail
-	 */
-	Cocktail getCocktailByName(String name);
+/* (non-Javadoc)
+ * @see java.lang.Object#toString()
+ */
+@Data
+
+/**
+ * Instantiates a new step data.
+ *
+ * @param step the step
+ * @param cocktail the cocktail
+ */
+@AllArgsConstructor
+
+/**
+ * Instantiates a new step data.
+ */
+@NoArgsConstructor
+public class StepData {
+	
+	/** The step. */
+	private Step step;
+	
+	/** The cocktail. */
+	private String cocktail;
 
 }

@@ -1,1 +1,13 @@
-id,version,cocktailId,name,description,orderNumber
+id|version|cocktailId|name|description|orderNumber
+||Hot Toddy||Skewer the cloves into 2 thin lemon slices.|1
+||Hot Toddy||Add to a heat proof glass.|2
+||Hot Toddy||Add the whiskey, lemon juice and honey.|3
+||Hot Toddy||Top up with boiling water.|4
+||Hot Toddy||Garnish with a cinnamon stick.| 5
+||Hot Toddy||Give it a quick stir and serve immediately.|6
+||Martins Rum||Add all the ingredients together in a heat proof glass.|1
+||Martins Rum||heat up.|2
+||Martins Rum||Once hot serve in a Irish Coffee glass.|3
+||Hot Tea Toddy||Put the tea, cognac, rum, cloves, honey and 4 thin strips of lemon zest into a saucepan and gently heat for 5 mins - without boiling.|1
+||Hot Tea Toddy||After 5 mins remove from the heat and let the mixture infuse for 5 minutes, before straining into 2 cups or heatproof glasses.|2
+||Hot Tea Toddy||Garnish with a slice of lemon or cinnamon stick and serve.|3

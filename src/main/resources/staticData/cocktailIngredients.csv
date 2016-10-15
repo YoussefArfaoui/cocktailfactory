@@ -1,1 +1,18 @@
-id,version,quantity,unit,optional,cocktailId
+id|version|cocktailId|quantity|unit|ingredientId|optional
+||Hot Toddy|2|tsp|Honey|false
+||Hot Toddy|25|ml|Lemon Juice|false
+||Hot Toddy|50|ml|Whiskey|false
+||Hot Toddy|5|none|Cloves|false
+||Martins Rum|22.5|ml|Lime Juice|false
+||Martins Rum|45|ml|Orange Juice|false
+||Martins Rum|37.5|ml|Dark Rum|false
+||Martins Rum|7.5|ml|Southern Comfort|false
+||Martins Rum|10|ml|Sugar Syrup|false
+||Martins Rum|1|teaspoon|Sugar|false
+||Martins Rum|37.5|ml|151-proof rum|false
+||Hot Tea Toddy|4|tbsp|Cognac|false
+||Hot Tea Toddy|4|tbsp|Dark Rum|false
+||Hot Tea Toddy|500|tbsp|Black tea|false
+||Hot Tea Toddy|12|none|Cloves|false
+||Hot Tea Toddy|3|tsp|Honey|false
+||Hot Tea Toddy|1|ml|Lemon|false
