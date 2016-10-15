@@ -157,7 +157,7 @@ public class CocktailInitializer {
 		}
 
 	}
-	
+
 	/**
 	 * The Enum IngredientFieldSetMapper.
 	 */
