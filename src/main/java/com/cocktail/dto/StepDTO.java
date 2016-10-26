@@ -1,12 +1,20 @@
 package com.cocktail.dto;
 
+import java.time.Duration;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 /**
  * 
  * @author adelgo
  *
  */
 
-public class StepDTO {
+@NoArgsConstructor
+@AllArgsConstructor
+public @Data class StepDTO {
 	
 	/** The name. */
 	String name;

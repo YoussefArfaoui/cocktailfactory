@@ -1,14 +1,20 @@
 package com.cocktail.dto;
 
 import java.math.BigDecimal;
+import java.time.Duration;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * 
  * @author adelgo
  *
  */
-
-public class IngredientDTO {
+@NoArgsConstructor
+@AllArgsConstructor
+public @Data class IngredientDTO {
 
 	/** The quantity. */
 	BigDecimal quantity;
