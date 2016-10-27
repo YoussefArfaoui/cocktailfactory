@@ -15,6 +15,9 @@
  */
 package com.cocktail.services;
 
+import java.util.List;
+
+import com.cocktail.dto.CocktailDTO;
 import com.cocktail.model.Cocktail;
 
 /**
@@ -24,6 +27,9 @@ import com.cocktail.model.Cocktail;
  *
  */
 public interface CocktailService {
+	
+	List<CocktailDTO> getAllCocktails();
+	
 	/**
 	 * Get cocktail by Id
 	 * 

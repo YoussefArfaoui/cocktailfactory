@@ -18,13 +18,23 @@ package com.cocktail.dto;
 import java.time.Duration;
 import java.util.List;
 
+import com.cocktail.model.Cocktail;
+import com.cocktail.model.CocktailIngredient;
+import com.cocktail.model.Step;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 /**
  * 
  * @author adelgo
  *
  */
 
-public class CocktailDTO {
+@NoArgsConstructor
+@AllArgsConstructor
+public @Data class CocktailDTO {
 
 	/** The name. */
 	String name;
@@ -42,9 +52,11 @@ public class CocktailDTO {
 	/** The image. */
 	String image;
 	
-	/** The steps. */
+	/** The steps. 
 	List<StepDTO> stepDTOs;
 	
-	List<IngredientDTO> ingredientDTOs;
+	List<IngredientDTO> ingredientDTOs;*/
 
+	
+	
 }
