@@ -36,6 +36,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public @Data class CocktailDTO {
 
+	/** The id  */
+	Long id;
+	
 	/** The name. */
 	String name;
 

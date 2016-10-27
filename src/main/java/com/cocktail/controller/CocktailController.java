@@ -18,12 +18,19 @@ package com.cocktail.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.util.UriComponentsBuilder;
 
 import com.cocktail.dto.CocktailDTO;
+import com.cocktail.model.Cocktail;
 import com.cocktail.services.CocktailService;
 
 @RestController
@@ -32,9 +39,26 @@ public class CocktailController {
 	@Autowired
 	private CocktailService cocktailService;
 
-	@RequestMapping(value = "/cocktail", method = RequestMethod.GET)
+	@RequestMapping(value = "/cocktails", method = RequestMethod.GET)
 	public List<CocktailDTO> getCocktails(){		
 		return cocktailService.getAllCocktails();
+	}
+	
+	@RequestMapping(value = "/cocktails/cocktail", method = RequestMethod.POST)
+	public ResponseEntity<?>  addCocktail(@RequestBody CocktailDTO cocktailDTO, UriComponentsBuilder ucBuilder){
+		
+		Cocktail cocktail = cocktailService.addCocktail(cocktailDTO);
+		
+		HttpHeaders headers = new HttpHeaders();
+		headers.setLocation(ucBuilder.path("/Cocktails/Cocktail/{id}").buildAndExpand(cocktail.getId()).toUri());
+		return new ResponseEntity<>(null, headers, HttpStatus.CREATED);
+	}
+	
+	@RequestMapping(value = "/cocktails/cocktail/", method = RequestMethod.GET)
+	public CocktailDTO getCocktail(@PathVariable String id){
+		
+		return cocktailService.getCocktailById(id);
+		
 	}
 	
 }

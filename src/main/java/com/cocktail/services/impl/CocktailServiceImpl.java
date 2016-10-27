@@ -41,14 +41,20 @@ public class CocktailServiceImpl implements CocktailService {
 	@Resource
 	CocktailMapper cocktailMapper;
 	
+	@Override
 	public List<CocktailDTO> getAllCocktails(){
 		
 		return cocktailMapper.getDTOFromCocktails(cocktailRepository.findAll());
 	}
 	
 	@Override
-	public Cocktail getCocktailById(Integer id) {
-		return null;
+	public Cocktail addCocktail(CocktailDTO cocktailDTO){
+		return cocktailRepository.save(cocktailMapper.getCocktailFromCocktailDTO(cocktailDTO));
+	}
+	
+	@Override
+	public CocktailDTO getCocktailById(String id) {
+		return cocktailMapper.getCocktailDTOFromCocktail(cocktailRepository.findOne(Long.parseLong(id)));
 	}
 
 	@Override
