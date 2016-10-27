@@ -24,4 +24,8 @@ public class CocktailMapper {
 		return cocktailDTOs;
 	}
 	
+	public Cocktail getCocktailFromCocktailDTO(CocktailDTO cocktailDTO){
+		return modelMapper.map(cocktailDTO, Cocktail.class);
+	}
+	
 }

@@ -28,7 +28,20 @@ import com.cocktail.model.Cocktail;
  */
 public interface CocktailService {
 	
+	/**
+	 * Get all cocktails
+	 * 
+	 * @return cocktail list
+	 */
 	List<CocktailDTO> getAllCocktails();
+	
+	/**
+	 * Add new cocktail
+	 * 
+	 * @param cocktailDTO
+	 * @return Cocktail
+	 */
+	Cocktail addCocktail(CocktailDTO cocktailDTO);
 	
 	/**
 	 * Get cocktail by Id
