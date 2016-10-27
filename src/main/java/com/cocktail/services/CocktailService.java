@@ -50,14 +50,14 @@ public interface CocktailService {
 	 *            the cocktail id
 	 * @return the cocktail
 	 */
-	Cocktail getCocktailById(Integer id);
+	CocktailDTO getCocktailById(String id);
 
 	/**
 	 * Get cocktail by name
 	 * 
 	 * @param name
 	 *            the cocktail name
-	 * @return the cocktail
+	 * @return the cocktail DTO
 	 */
 	Cocktail getCocktailByName(String name);
 

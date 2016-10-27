@@ -53,8 +53,8 @@ public class CocktailServiceImpl implements CocktailService {
 	}
 	
 	@Override
-	public Cocktail getCocktailById(Integer id) {
-		return null;
+	public CocktailDTO getCocktailById(String id) {
+		return cocktailMapper.getCocktailDTOFromCocktail(cocktailRepository.findOne(Long.parseLong(id)));
 	}
 
 	@Override
