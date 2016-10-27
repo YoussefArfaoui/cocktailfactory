@@ -33,16 +33,18 @@ import org.springframework.http.converter.StringHttpMessageConverter;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
+import com.cocktail.initializer.CocktailInitializer;
 import com.cocktail.model.User;
 import com.cocktail.repository.UserRepository;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @Configuration
 @ComponentScan
 @EnableAutoConfiguration
 @SpringBootApplication
 public class CocktailApplication extends WebMvcConfigurerAdapter {
-
-	Logger logger = LoggerFactory.getLogger(CocktailApplication.class);
 	
 	public static void main(String[] args) {
 		SpringApplication.run(CocktailApplication.class, args);
@@ -69,17 +71,17 @@ public class CocktailApplication extends WebMvcConfigurerAdapter {
 	    // http
 	    HttpMessageConverter converter = new StringHttpMessageConverter();
 	    converters.add(converter);
-	    logger.info("HttpMessageConverter added");
+	    log.info("HttpMessageConverter added");
 
 	    // string
 	    converter = new FormHttpMessageConverter();
 	    converters.add(converter);
-	    logger.info("FormHttpMessageConverter added");
+	    log.info("FormHttpMessageConverter added");
 
 	    // json
 	    converter = new MappingJackson2HttpMessageConverter();
 	    converters.add(converter);
-	    logger.info("MappingJackson2HttpMessageConverter added");
+	    log.info("MappingJackson2HttpMessageConverter added");
 
 	}
 	
