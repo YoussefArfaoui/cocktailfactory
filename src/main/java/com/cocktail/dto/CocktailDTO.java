@@ -16,11 +16,6 @@
 package com.cocktail.dto;
 
 import java.time.Duration;
-import java.util.List;
-
-import com.cocktail.model.Cocktail;
-import com.cocktail.model.CocktailIngredient;
-import com.cocktail.model.Step;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
