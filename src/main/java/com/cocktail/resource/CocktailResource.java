@@ -13,9 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.cocktail.dto;
+package com.cocktail.resource;
 
 import java.time.Duration;
+import java.util.List;
+
+import org.springframework.hateoas.ResourceSupport;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -27,9 +30,7 @@ import lombok.NoArgsConstructor;
  *
  */
 
-@NoArgsConstructor
-@AllArgsConstructor
-public @Data class CocktailDTO {
+public class CocktailResource extends ResourceSupport{
 
 	/** The id  */
 	Long id;
@@ -50,10 +51,11 @@ public @Data class CocktailDTO {
 	/** The image. */
 	String image;
 	
-	/** The steps. 
-	List<StepDTO> stepDTOs;
+	/** The steps. */
+	List<StepResource> stepDTOs;
 	
-	List<IngredientDTO> ingredientDTOs;*/
+	/** The ingredients. */
+	List<IngredientResource> ingredientDTOs;
 
 	
 	

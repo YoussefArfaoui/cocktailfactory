@@ -21,9 +21,9 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Component;
 
-import com.cocktail.dto.CocktailDTO;
 import com.cocktail.model.Cocktail;
 import com.cocktail.repository.CocktailRepository;
+import com.cocktail.resource.CocktailResource;
 import com.cocktail.services.CocktailMapper;
 import com.cocktail.services.CocktailService;
 
@@ -42,18 +42,18 @@ public class CocktailServiceImpl implements CocktailService {
 	CocktailMapper cocktailMapper;
 	
 	@Override
-	public List<CocktailDTO> getAllCocktails(){
+	public List<CocktailResource> getAllCocktails(){
 		
 		return cocktailMapper.getDTOFromCocktails(cocktailRepository.findAll());
 	}
 	
 	@Override
-	public Cocktail addCocktail(CocktailDTO cocktailDTO){
+	public Cocktail addCocktail(CocktailResource cocktailDTO){
 		return cocktailRepository.save(cocktailMapper.getCocktailFromCocktailDTO(cocktailDTO));
 	}
 	
 	@Override
-	public CocktailDTO getCocktailById(String id) {
+	public CocktailResource getCocktailById(String id) {
 		return cocktailMapper.getCocktailDTOFromCocktail(cocktailRepository.findOne(Long.parseLong(id)));
 	}
 
