@@ -17,8 +17,8 @@ package com.cocktail.services;
 
 import java.util.List;
 
-import com.cocktail.dto.CocktailDTO;
 import com.cocktail.model.Cocktail;
+import com.cocktail.resource.CocktailResource;
 
 /**
  * Cocktail Service
@@ -33,7 +33,7 @@ public interface CocktailService {
 	 * 
 	 * @return cocktail list
 	 */
-	List<CocktailDTO> getAllCocktails();
+	List<CocktailResource> getAllCocktails();
 	
 	/**
 	 * Add new cocktail
@@ -41,7 +41,7 @@ public interface CocktailService {
 	 * @param cocktailDTO
 	 * @return Cocktail
 	 */
-	Cocktail addCocktail(CocktailDTO cocktailDTO);
+	Cocktail addCocktail(CocktailResource cocktailDTO);
 	
 	/**
 	 * Get cocktail by Id
@@ -50,7 +50,7 @@ public interface CocktailService {
 	 *            the cocktail id
 	 * @return the cocktail
 	 */
-	CocktailDTO getCocktailById(String id);
+	CocktailResource getCocktailById(String id);
 
 	/**
 	 * Get cocktail by name

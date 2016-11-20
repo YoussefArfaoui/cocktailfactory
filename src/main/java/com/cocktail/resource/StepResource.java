@@ -13,31 +13,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.cocktail.dto;
+package com.cocktail.resource;
 
-import java.math.BigDecimal;
+import org.springframework.hateoas.ResourceSupport;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
 /**
  * 
  * @author adelgo
  *
  */
-@NoArgsConstructor
-@AllArgsConstructor
-public @Data class IngredientDTO {
 
-	/** The quantity. */
-	BigDecimal quantity;
-
-	/** The unit. */
-	String unit;
-
-	/** The optional. */
-	boolean optional;
+public class StepResource extends ResourceSupport{
 	
 	/** The name. */
 	String name;
@@ -45,11 +32,8 @@ public @Data class IngredientDTO {
 	/** The description. */
 	String description;
 
-	/** The image. */
-	// TODO : need to be BLOB
-	String image;
-	
-	/** The type. */
-	String type;
-	
+	/** The order. */
+	int orderNumber;
+
+
 }

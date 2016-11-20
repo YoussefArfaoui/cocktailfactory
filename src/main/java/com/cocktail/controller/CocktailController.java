@@ -28,8 +28,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import com.cocktail.dto.CocktailDTO;
 import com.cocktail.model.Cocktail;
+import com.cocktail.resource.CocktailResource;
 import com.cocktail.services.CocktailService;
 
 @RestController
@@ -39,12 +39,12 @@ public class CocktailController {
 	private CocktailService cocktailService;
 
 	@RequestMapping(value = "/cocktails", method = RequestMethod.GET)
-	public List<CocktailDTO> getCocktails(){		
+	public List<CocktailResource> getCocktails(){		
 		return cocktailService.getAllCocktails();
 	}
 	
 	@RequestMapping(value = "/cocktails/cocktail", method = RequestMethod.POST)
-	public ResponseEntity<?>  addCocktail(@RequestBody CocktailDTO cocktailDTO, UriComponentsBuilder ucBuilder){
+	public ResponseEntity<?>  addCocktail(@RequestBody CocktailResource cocktailDTO, UriComponentsBuilder ucBuilder){
 		
 		Cocktail cocktail = cocktailService.addCocktail(cocktailDTO);
 		
@@ -54,7 +54,7 @@ public class CocktailController {
 	}
 	
 	@RequestMapping(value = "/cocktails/cocktail/", method = RequestMethod.GET)
-	public CocktailDTO getCocktail(@PathVariable String id){
+	public CocktailResource getCocktail(@PathVariable String id){
 		
 		return cocktailService.getCocktailById(id);
 		
